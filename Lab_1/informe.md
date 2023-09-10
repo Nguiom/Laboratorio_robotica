@@ -50,4 +50,4 @@ Lo primero que se define en el mismo es el modulo, seguido van el workobject, el
 
 La simulación para la escritura en un plano <br>
 
-https://youtu.be/ugJ9bCAlZsQ
+[![Simulacion](https://img.youtube.com/vi/ugJ9bCAlZsQ/maxresdefault.jpg)](https://youtu.be/ugJ9bCAlZsQ)
