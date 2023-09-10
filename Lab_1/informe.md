@@ -1,5 +1,7 @@
 # Laboratorio_robotica
-** Por Nicolas Guio y Andres**
+
+**Por Nicolas Guio y Andres**
+
 El objetivo de este laboratorio es usar el robot industrial ABB IRB 140 para escribir nuestro nombres en tanto una superficie plana como para una inclinida a 30 grados.
 ## Contenido
 - [Solución planteada](#1)
@@ -51,3 +53,9 @@ Lo primero que se define en el mismo es el modulo, seguido van el workobject, el
 La simulación para la escritura en un plano <br>
 
 [![Simulacion](https://img.youtube.com/vi/ugJ9bCAlZsQ/maxresdefault.jpg)](https://youtu.be/ugJ9bCAlZsQ)
+
+
+<br>
+<a id='4'></a>
+
+## Calibración
