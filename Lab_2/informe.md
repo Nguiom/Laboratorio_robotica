@@ -1,6 +1,6 @@
 # Laboratorio_robotica
 
-**Por Nicolas Guio y Andres**
+**Por Nicolas Guio y Andrés Serna**
 
 El objetivo de este laboratorio es usar el robot industrial ABB IRB 140 para escribir nuestro nombres en tanto una superficie plana como para una inclinida a 30 grados.
 ## Contenido
