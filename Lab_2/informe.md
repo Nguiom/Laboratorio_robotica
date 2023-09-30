@@ -2,7 +2,7 @@
 
 **Por Nicolas Guio y Andrés Serna**
 
-El objetivo de este laboratorio es usar el robot industrial ABB IRB 140 para escribir nuestro nombres en tanto una superficie plana como para una inclinida a 30 grados.
+El objetivo principal de esta práctica de laboratorio era aprender a programar un robot industrial ABB IRB140 utilizando RAPID y controlar sus acciones mediante señales digitales de entrada y salida. Además, debíamos desarrollar la habilidad de manejar bucles, condicionales y estructuras de control en RAPID, así como comprender cómo configurar y utilizar el módulo de entradas y salidas digitales en el controlador IRC5.
 ## Contenido
 - [Solución planteada](#1)
 - [Codigo](#2)
@@ -15,20 +15,15 @@ El objetivo de este laboratorio es usar el robot industrial ABB IRB 140 para esc
 
 ## Solución planteada
 
-Lo primero que se hizo fue diseñar una herramienta que sostuviera el marcador y que actuara como efector final. Esta en un principio se iba hacer de forma recta, pero despues de discutirlo con otros compañeros se llego a la conclusión de que esa forma podria presentar más singularidades que un inclinada.
-Al final se diseño una con una inclinación 75 grados con respecto a su base, como se ver en los siguientes [planos](https://github.com/Nguiom/Laboratorio_robotica/raw/main/Lab_1/BaseMarcador.pdf).<br>
+En la práctica de laboratorio de robótica que realizamos, utilizamos RobotStudio versión 5 para programar un manipulador industrial ABB IRB140 y aprovechamos el módulo de entradas y salidas digitales en el controlador IRC5. Los objetivos principales eran el manejo de RAPID y la comunicación a través de señales digitales.
 
-Este modelo se mando a hacer mediante una impresión 3D con un 30% de relleno y tambien se utilizo en la simulación en robostudio, ademas de esta se uso un cubo para simular la superficie a escribir, a este se le puso un relieve de 10mm para facilitar la creación de trayectorias.<br>
+Para comenzar, aseguramos que todos los requisitos estuvieran en su lugar: teníamos RobotStudio instalado y activo, la hoja de datos del manipulador IRB140 y la hoja de datos del módulo 3HAC025917-001/00DSQC652. Cada equipo de trabajo también tuvo su propia memoria USB para el proyecto.
 
-<img src="https://github.com/Nguiom/Laboratorio_robotica/raw/main/Lab_1/cubo.jpg" width="600">
+La práctica se dividió en dos ejes temáticos:
 
-Estos modelos se subieron a una estación de trabajo en robostudio en la cual se definio el workobject como el plano del cubo el se va a trabajar, tambien se definio la herramienta de trabajo y el tcp de esta en la punta de la misma paralela a la herramienta.<br>
+Programación intermedia en RAPID: Manejo de bucles y condicionales: Comenzamos por desarrollar la lógica para que el robot respondiera a las señales digitales de entrada. Creamos dos señales digitales de entrada configuradas correctamente en el código RAPID. La primera señal de entrada activaría una rutina de escritura sobre cualquier superficie y encendería una luz de indicación. Para lograrlo, utilizamos bucles y condicionales en nuestro código para controlar el flujo del programa. Al finalizar la rutina, el brazo robótico debía regresar a su posición de HOME, donde todos los ángulos articulares eran 0 grados.
 
-<img src="https://github.com/Nguiom/Laboratorio_robotica/raw/main/Lab_1/estacion.jpg" width="600">
-
-Seguido se usa la herramienta de ruta automatica usando las aristas del relieve para obtener los puntos para los nombres y la figura. En el caso de los puntos llamados home, uno se elegio a una posicion cercana a la 0-0-0-0-0-0 de los ejes de la maquina en el marco de referencia globla, mientras que la otra se hizo en el centro y a 100mm de distancia en el eje z de la figura por hacer, el cual se encuentra en el marco de referencia del workobject al igualque las rutas. El primero de esto se refiere a la posición inicial/final deseada para el robot, en el caso del segundo es la posición a la cual la maquina se devuelve despues de escribir cada letra.<br>
-
-Finalmento se creo el codigo en RAPID para que ejecutace las funciones como en el siguiente diagrama de flujo
+Manejo del módulo de Entradas y Salidas digitales: Comunicaciones por señales digitales: La segunda señal de entrada tenía como objetivo posicionar el brazo en una pose de mantenimiento, lo que permitiría instalar o desinstalar herramientas. Al mismo tiempo, esta señal debía apagar la luz de indicación. Para lograr esto, utilizamos las funciones del módulo de entradas y salidas digitales para controlar las señales de salida correspondientes. También implementamos la lógica necesaria para cambiar entre las rutinas utilizando botones en el mando de señales digitales.<br>
 
 <img src="https://github.com/Nguiom/Laboratorio_robotica/raw/main/Lab_1/diagrama.jpg" width="600">
 
