@@ -73,7 +73,13 @@ https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/0fab4f72-6ef0-47f
 
 Una vez que estábamos satisfechos con la simulación y estábamos seguros de que el programa funcionaba correctamente en el entorno virtual, procedimos a la prueba física en el robot real.  <br>
 
-https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/e8362120-9137-4dee-8fca-febee6288b44
-https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/044e56fa-a833-4bae-baec-38330eaa06eb
+
+https://github.com/Nguiom/Laboratorio_robotica/assets/71941461/4f0d3a6e-1175-4b5d-a76c-93b5026105f4
+https://github.com/Nguiom/Laboratorio_robotica/assets/71941461/06ed6c47-5e93-4294-a4aa-0a10381e4f82
+
 
 <br>
+
+
+
+
