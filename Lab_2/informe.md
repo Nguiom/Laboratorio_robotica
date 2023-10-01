@@ -7,7 +7,7 @@ El objetivo principal de esta práctica de laboratorio era aprender a programar 
 - [Solución planteada](#1)
 - [Codigo](#2)
 - [Simulación](#3)
-- [Calibración](#4)
+- [Pruebas físicas](#4)
 
 <br>
 
