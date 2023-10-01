@@ -40,32 +40,14 @@ MODULE Module1
     CONST robtarget Target_30:=[[-36.383734505,25.577831517,0],[0.703315525,0,0,-0.710877818],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
     CONST robtarget Target_40:=[[-18.698035542,35.64858624,0],[0.703315525,0,0,-0.710877818],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
     CONST robtarget Target_50:=[[-44.539345321,35.924963081,0],[0.703315525,0,0,-0.710877818],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
-   !***********************************************************
-    !
-    ! Module:  Module1
-    !
-    ! Description:
-    !   <Insert description here>
-    !
-    ! Author: robot
-    !
-    ! Version: 1.0
-    !
-    !***********************************************************
-    
-    
-    !***********************************************************
-    !
-    ! Procedure main
-    !
-    !   This is the entry point of your program
-    !
-    !***********************************************************
     VAR bool n:=TRUE;
+    VAR intnum activate;
     PROC main()
         !Add your code here
         CONNECT mueve WITH sostenido;
         ISignalDI DI_01,1,mueve;
+        CONNECT activate WITH pausa;
+        ISignalDI DI_02,1,activate;
         set DO_01;
         WHILE TRUE DO
             IF n THEN
@@ -131,6 +113,11 @@ MODULE Module1
         MoveL Target_50,v100,z100,CualquierCosa\WObj:=Workobject_8;
     ENDPROC
    
+    TRAP pausa
+        WaitTime 1;
+        n:=TRUE;
+    ENDTRAP
+    
     TRAP sostenido
         WaitTime 1;
         IF boton=0 THEN
