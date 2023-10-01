@@ -62,7 +62,7 @@ Una descripción general del código RAPID es:
 
 En primer lugar, después de haber escrito y depurado nuestro código RAPID, procedimos a la simulación en RobotStudio.  <br>
 
-(https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/0fab4f72-6ef0-47f5-9a94-70980cc1fc08)
+https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/0fab4f72-6ef0-47f5-9a94-70980cc1fc08
 
 
 
@@ -73,7 +73,7 @@ En primer lugar, después de haber escrito y depurado nuestro código RAPID, pro
 
 Una vez que estábamos satisfechos con la simulación y estábamos seguros de que el programa funcionaba correctamente en el entorno virtual, procedimos a la prueba física en el robot real.  <br>
 
-(https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/e8362120-9137-4dee-8fca-febee6288b44)
-(https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/044e56fa-a833-4bae-baec-38330eaa06eb)
+https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/e8362120-9137-4dee-8fca-febee6288b44
+https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/044e56fa-a833-4bae-baec-38330eaa06eb
 
 <br>
