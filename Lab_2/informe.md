@@ -76,7 +76,8 @@ Una vez que estábamos satisfechos con la simulación y estábamos seguros de qu
 
 https://github.com/Nguiom/Laboratorio_robotica/assets/71941461/4f0d3a6e-1175-4b5d-a76c-93b5026105f4
 
-[![Practica](https://img.youtube.com/watch/EwkSQPSJku0?feature=share/maxresdefault.jpg)](https://youtube.com/watch/EwkSQPSJku0?feature=share)
+
+[![Practica](https://img.youtube.com/watch/EwkSQPSJku0?/maxresdefault.jpg)](https://youtube.com/watch/EwkSQPSJku0?)
 
 
 
