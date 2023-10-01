@@ -25,10 +25,6 @@ Programación intermedia en RAPID: Manejo de bucles y condicionales: Comenzamos 
 
 Manejo del módulo de Entradas y Salidas digitales: Comunicaciones por señales digitales: La segunda señal de entrada tenía como objetivo posicionar el brazo en una pose de mantenimiento, lo que permitiría instalar o desinstalar herramientas. Al mismo tiempo, esta señal debía apagar la luz de indicación. Para lograr esto, utilizamos las funciones del módulo de entradas y salidas digitales para controlar las señales de salida correspondientes. También implementamos la lógica necesaria para cambiar entre las rutinas utilizando botones en el mando de señales digitales.<br>
 
-<img src="https://github.com/Nguiom/Laboratorio_robotica/raw/main/Lab_1/diagrama.jpg" width="600">
-
-<br>
-<a id='2'></a>
 
 ## Codigo
 
@@ -36,7 +32,23 @@ El codigo del modulo utilizado se encuentra en este mismo [github](https://githu
 
 <br>
 
-Lo primero que se define en el mismo es el modulo, seguido van el workobject, el toolobject y las constantes que en este caso son los puntos de la trayectoria. Seguido se define el main, en el que se llaman las funciones a ejecutarse, en esta caso las rutas. Finalmente se definen las rutas, que en este caso hay una para cada letra, como se puede ver en el codigo la funcion de ruta usa las el comando "MoveL" para mover linealmente al robot a uno de los puntos previamente especificados.
+Una descripción general del código RAPID es:
+
+1. **Definición del Módulo**: El código RAPID comienza generalmente con la definición del módulo utilizando la palabra clave `MODULE`. Esto establece un alcance para las variables y procedimientos dentro del módulo.
+
+2. **Definición del Workobject**: A continuación, se define el workobject, que representa el objeto de trabajo con el que el robot va a interactuar. Esto incluye la ubicación y orientación del objeto en el espacio de trabajo del robot.
+
+3. **Definición del Toolobject**: Se define el toolobject que representa la herramienta que el robot utilizará. Esto incluye su geometría y características como el centro de gravedad.
+
+4. **Definición de Puntos de Trayectoria**: Aquí se pueden definir puntos de trayectoria que el robot debe seguir. Estos puntos incluyen coordenadas espaciales y datos de orientación.
+
+5. **Procedimiento Main()**: Por lo general, se crea un procedimiento principal llamado `Main()` o similar, que es la entrada principal del programa. Aquí se establece la lógica principal del programa, que incluiría la recepción y procesamiento de señales digitales de entrada, bucles, condicionales y la ejecución de las rutinas deseadas.
+
+6. **Configuración de Entradas y Salidas Digitales**: Se pueden configurar las entradas y salidas digitales utilizando las funciones adecuadas proporcionadas por el controlador IRC5.
+
+7. **Control de Señales Digitales**: Dentro del procedimiento `Main()`, se programaría la lógica para controlar las señales digitales de entrada y salida según los requisitos de la tarea. Esto podría incluir condicionales para verificar el estado de las entradas y, en función de eso, tomar decisiones sobre las acciones a realizar.
+
+8. **Control de Movimiento del Robot**: Se utilizarán comandos de movimiento para controlar la posición y la orientación del robot en función de las señales digitales y otros datos de entrada.
 
 <br>
 
