@@ -28,7 +28,8 @@ Manejo del módulo de Entradas y Salidas digitales: Comunicaciones por señales 
 
 ## Codigo
 
-El codigo del modulo utilizado se encuentra en este mismo [github](https://github.com/Nguiom/Laboratorio_robotica/tree/main/Lab_1/Module1.mod)
+El codigo del modulo utilizado se encuentra en este mismo [github]
+(https://github.com/Nguiom/Laboratorio_robotica/blob/main/Lab_2/Module1.mod)
 
 <br>
 
