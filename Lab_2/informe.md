@@ -72,7 +72,7 @@ En primer lugar, después de haber escrito y depurado nuestro código RAPID, pro
 
 Una vez que estábamos satisfechos con la simulación y estábamos seguros de que el programa funcionaba correctamente en el entorno virtual, procedimos a la prueba física en el robot real.  <br>
 
-[![Prueba_1](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/e8362120-9137-4dee-8fca-febee6288b44)
-[![Prueba_2](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/044e56fa-a833-4bae-baec-38330eaa06eb)
+[![Prueba_1]](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/e8362120-9137-4dee-8fca-febee6288b44)
+[![Prueba_2]](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/044e56fa-a833-4bae-baec-38330eaa06eb)
 
 <br>
