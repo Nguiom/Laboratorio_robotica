@@ -60,7 +60,7 @@ Una descripción general del código RAPID es:
 ## Simulación
 
 
-La simulación para la escritura en un plano <br>
+En primer lugar, después de haber escrito y depurado nuestro código RAPID, procedimos a la simulación en RobotStudio.  <br>
 
 [![Simulacion](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/0fab4f72-6ef0-47f5-9a94-70980cc1fc08)
 
@@ -68,4 +68,11 @@ La simulación para la escritura en un plano <br>
 <br>
 <a id='4'></a>
 
-## Calibración
+## Pruebas físicas
+
+Una vez que estábamos satisfechos con la simulación y estábamos seguros de que el programa funcionaba correctamente en el entorno virtual, procedimos a la prueba física en el robot real.  <br>
+
+[![Prueba_1](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/e8362120-9137-4dee-8fca-febee6288b44)
+[![Prueba_2](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/044e56fa-a833-4bae-baec-38330eaa06eb)
+
+<br>
