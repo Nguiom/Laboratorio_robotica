@@ -53,6 +53,8 @@ Una descripción general del código RAPID es:
 
 <br>
 
+
+
 <a id='3'></a>
 
 ## Simulación
@@ -60,7 +62,7 @@ Una descripción general del código RAPID es:
 
 La simulación para la escritura en un plano <br>
 
-[![Simulacion](https://img.youtube.com/vi/ugJ9bCAlZsQ/maxresdefault.jpg)](https://youtu.be/ugJ9bCAlZsQ)
+[![Simulacion](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/0fab4f72-6ef0-47f5-9a94-70980cc1fc08)
 
 
 <br>
