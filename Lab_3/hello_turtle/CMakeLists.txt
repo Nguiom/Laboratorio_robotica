@@ -57,10 +57,11 @@ include_directories(
 # )
 
 catkin_install_python(PROGRAMS
-  scripts/turtlePos.py
+  scripts/move.py
   scripts/turtleSpawn.py
-  scripts/turtleSub.py
+  scripts/khbit.py
   scripts/keyboard.py
+  scripts/teleport.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

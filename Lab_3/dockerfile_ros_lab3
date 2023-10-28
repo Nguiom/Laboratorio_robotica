@@ -5,7 +5,17 @@ SHELL [ "/bin/bash" , "-c" ]
 RUN apt-get update && apt-get install -y git pip nano build-essential 
 
 RUN pip install --upgrade pip
-RUN pip install getch conio termios
+RUN pip install getch conio termios atexit select
 
 RUN source /opt/ros/noetic/setup.bash \
+ && mkdir -p /hello_turtle/source \
+ && cd /hello_turtle/source
+ && catkin_init_workspace \
  && git clone https://github.com/Nguiom/Laboratorio_robotica.git
+
+RUN source /opt/ros/noetic/setup.bash \
+ && cd hello_turtle_ws \
+ && catkin_make
+RUN echo "source /hello_turtle_ws/devel/setup.bash" >> ~/.bashrc
+
+WORKDIR /hello_turtle_ws
