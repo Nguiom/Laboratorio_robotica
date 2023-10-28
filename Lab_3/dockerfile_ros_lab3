@@ -5,6 +5,7 @@ SHELL [ "/bin/bash" , "-c" ]
 RUN apt-get update && apt-get install -y git pip nano build-essential 
 
 RUN pip install --upgrade pip
+RUN pip install getch conio termios
 
 RUN source /opt/ros/noetic/setup.bash \
  && git clone https://github.com/Nguiom/Laboratorio_robotica.git
