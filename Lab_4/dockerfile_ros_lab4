@@ -1,0 +1,22 @@
+FROM osrf/ros:noetic-desktop-full
+
+SHELL [ "/bin/bash" , "-c" ]
+
+RUN apt-get update && apt-get install -y git pip nano build-essential 
+
+RUN pip install --upgrade pip
+RUN pip install numpy
+RUN apt-get -y install ros-noetic-dynamixel-workbench
+
+RUN source /opt/ros/noetic/setup.bash \
+ && mkdir -p ./fantasma_ws/src \
+ && cd ./fantasma_ws/src \
+ && catkin_init_workspace \
+ && git clone https://github.com/Nguiom/fantasma.git
+
+RUN source /opt/ros/noetic/setup.bash \
+ && cd ./fantasma_ws \
+ && catkin_make
+RUN echo "source /fantasma_ws/devel/setup.bash" >> ~/.bashrc
+
+WORKDIR /fantasma_ws

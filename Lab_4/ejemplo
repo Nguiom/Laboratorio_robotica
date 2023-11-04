@@ -1,0 +1,110 @@
+"""
+Allows to use the service dynamixel_command 
+"""
+import rospy
+import time
+# from std_msgs.msg import String
+from dynamixel_workbench_msgs.srv import DynamixelCommand
+
+__author__ = "F Gonzalez, S Realpe, JM Fajardo"
+__credits__ = ["Felipe Gonzalez", "Sebastian Realpe", "Jose Manuel Fajardo", "Robotis"]
+__email__ = "fegonzalezro@unal.edu.co"
+__status__ = "Test"
+
+def jointCommand(command, id_num, addr_name, value, time):
+    #rospy.init_node('joint_node', anonymous=False)
+    rospy.wait_for_service('dynamixel_workbench/dynamixel_command')
+    try:        
+        dynamixel_command = rospy.ServiceProxy(
+            '/dynamixel_workbench/dynamixel_command', DynamixelCommand)
+        result = dynamixel_command(command,id_num,addr_name,value)
+        rospy.sleep(time)
+        return result.comm_result
+    except rospy.ServiceException as exc:
+        print(str(exc))
+
+if __name__ == '__main__':
+    try:
+        # Goal_Position (0,1023)
+        # Torque_Limit (0,1023)
+        jointCommand('', 1, 'Torque_Limit', 600, 0)
+        jointCommand('', 2, 'Torque_Limit', 500, 0)
+        jointCommand('', 3, 'Torque_Limit', 400, 0)
+        jointCommand('', 4, 'Torque_Limit', 400, 0)
+        jointCommand('', 4, 'Goal_Position', 512, 0.5)
+        jointCommand('', 3, 'Goal_Position', 512, 0.5)
+        time.sleep(0.5)
+        jointCommand('', 2, 'Goal_Position', 512, 0.5)
+        time.sleep(0.5)
+        jointCommand('', 1, 'Goal_Position', 512, 0.5)
+        jointCommand('', 4, 'Goal_Position', 750, 1)
+        time.sleep(0.2)
+        jointCommand('', 2, 'Goal_Position', 512, 1)
+        time.sleep(0.5)
+        jointCommand('', 3, 'Goal_Position', 240, 0.5)
+        jointCommand('', 1, 'Goal_Position', 512, 0.5)
+        
+    except rospy.ROSInterruptException:
+        pass
+
+#!/usr/bin/env python
+import rospy
+from std_msgs.msg import String
+from sensor_msgs.msg import JointState
+
+def callback(data):
+    rospy.loginfo(data.position)
+    if data.position[4]>-2:
+        print('gripper abierto')
+    else:
+        print('gripper cerrado')
+    
+def listener():
+    rospy.init_node('joint_listener', anonymous=True)
+    rospy.Subscriber("/dynamixel_workbench/joint_states", JointState, callback)
+    rospy.spin()
+
+if __name__ == '__main__':
+    try:
+        while not rospy.is_shutdown():
+            listener()
+    except rospy.ROSInterruptException:
+        pass
+
+mport rospy
+from std_msgs.msg import String
+from sensor_msgs.msg import JointState
+from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+
+def joint_publisher():
+    pub = rospy.Publisher('/joint_trajectory', JointTrajectory, queue_size=0)
+    rospy.init_node('joint_publisher', anonymous=False)
+    
+    while not rospy.is_shutdown():
+        state = JointTrajectory()
+        state.header.stamp = rospy.Time.now()
+        state.joint_names = ["joint_1", "joint_2", "joint_3", "joint_4", "joint_5"]
+        point = JointTrajectoryPoint()
+        point.positions = [0, 0, 0, 0, 0]    
+        point.time_from_start = rospy.Duration(0.5)
+        state.points.append(point)
+        pub.publish(state)
+        print('published command')
+        rospy.sleep(1)
+
+        state = JointTrajectory()
+        state.header.stamp = rospy.Time.now()
+        state.joint_names = ["joint_1", "joint_2", "joint_3", "joint_4", "joint_5"]
+        point = JointTrajectoryPoint()
+        point.positions = [0.25, 0, 0, 0, 1.3]    
+        point.time_from_start = rospy.Duration(0.5)
+        state.points.append(point)
+        pub.publish(state)
+        print('published command')
+        rospy.sleep(1)
+
+if __name__ == '__main__':
+    try:
+        joint_publisher()
+    except rospy.ROSInterruptException:
+        pass
