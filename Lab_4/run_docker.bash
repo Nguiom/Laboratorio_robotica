@@ -16,4 +16,4 @@ DOCKER_ENV_VARS="
 DOCKER_ARGS=${DOCKER_VOLUMES}" "${DOCKER_ENV_VARS}
 
 # Run the command
-docker run -it --net=host --ipc=host --ulimit nofile=1024:524288 --privileged ${DOCKER_ARGS} "$1"
+docker run -it --net=host --ipc=host --ulimit nofile=1024:524288 --device=/dev/ttyUSB0 --privileged ${DOCKER_ARGS} "$1"

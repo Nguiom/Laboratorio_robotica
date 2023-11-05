@@ -71,7 +71,7 @@ if __name__ == '__main__':
     except rospy.ROSInterruptException:
         pass
 
-mport rospy
+import rospy
 from std_msgs.msg import String
 from sensor_msgs.msg import JointState
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
