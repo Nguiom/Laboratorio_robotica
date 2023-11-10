@@ -62,4 +62,7 @@ Se pudo observar el movimiento de la tortuga controlado por las teclas 'A', 'S',
 
 
 El experimento demostró la integración de ROS y MATLAB para la simulación y control de robots en un entorno Linux. Los scripts desarrollados permitieron suscribirse y enviar información de posición a la tortuga en TurtleSim. Se recomienda buscar información adicional sobre la finalización del nodo maestro en MATLAB para garantizar un cierre adecuado del sistema. Asimismo, se pudo observar el movimiento de la tortuga controlado por las teclas 'A', 'S', 'W' y 'D', así como los cambios instantáneos en la posición con las teclas 'R' y 'ESPACIO" a través de Python.
+
+[![Simulacion](https://img.youtube.com/vi/M7SKSMkSA3U/maxresdefault.jpg)](https://youtu.be/M7SKSMkSA3U)
+
 [boton.webm](https://github.com/Nguiom/Laboratorio_robotica/assets/71941461/5030a9f0-3c95-48ac-974b-0b3162aea943)
