@@ -8,7 +8,7 @@ RUN pip install --upgrade pip
 RUN pip install numpy
 RUN apt-get -y install ros-noetic-dynamixel-workbench
 RUN apt-get install -y xvfb
-apt-get install python3-tk
+RUN apt-get install -y python3-tk
 
 RUN source /opt/ros/noetic/setup.bash \
  && mkdir -p ./fantasma_ws/src \
