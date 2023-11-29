@@ -3,7 +3,7 @@
 **Por Nicolas Guio y Andrés Serna**
 ## Contenido
 - [Resumen](#1)
-- [Parámetros DH](#2)
+- [Ecuaciones de la inversa](#2)
 - [Descripción del código de programación](#3)
 - [Resultados](#4)
 
@@ -13,49 +13,16 @@
 
 ## Resumen
 
-En el presente informe se detallan las actividades realizadas en el laboratorio, que incluyeron el uso de Linux, ROS (Robotic Operating System), Python y MATLAB para llevar a cabo la simulación y control de una tortuga (turtle) en el simulador TurtleSim.
+En el presente informe se detallan las actividades realizadas en el laboratorio, que incluyeron el uso de Linux, ROS (Robotic Operating System), Pythonpara el movimiento lineal del robot Phantom.
 
-## Parámetros DH
+## Ecuaciones de la inversa
 
-El esquema que ilustra el robot pinza se presenta a continuación.
+Se soluciono la cinematica inversa del robot para el que se reciban cordenas $x,y,z$ y la orientación del vector unitario de la conponente "O" del NOA estara en dirrección [0,0,1], la que corresponde a una linea con solo componentes en z. Estas son las ecuaciones utilizadas:
 
-![image](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/0152fa04-4d3e-4274-8ec5-c85c60c39608)
+```math
+q1=\atantwo
 
-Los marcos de referencia para caracterizar el robot a través de los parámetros DH, basándose en el esquema del robot pinza y las distancias de las articulaciones ya medidas, son los siguientes:
-
-![image](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/731b688f-3f34-480b-b2a8-f7c407236a21)
-
-La siguiente tabla muestra los parámetros DH.
-
-![image](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/5f5d274b-6c6e-4146-8a7f-dbb9296170c2)
-
-Utilizando los parámetros DH, es posible generar las matrices que describen cada enlace con respecto al otro. A continuación se presentan las matrices correspondientes a cada enlace.
-
-![image](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/1ccee768-ad4b-4013-9e50-9a9d3f3bd2a8)
-
-La matriz de la herramienta se describe así. La distancia medida entre el centro del gripper y el eslabón es de 1 cm.
-
-![image](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/b073e563-0419-4c28-9aa5-e82d988433bf)
-
-La matriz de transformación homogénea desde la base hasta el efector final, obtenida mediante la multiplicación consecutiva de las matrices mencionadas anteriormente, se expresa como:
-
-![image](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/44db06d8-2327-40d9-a415-fcff1e0f7951)
-
-donde:
-
-![image](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/40b33c73-c4a9-443c-9bf0-2d33f9819de7)
-
-El robot construido con las herramientas SerialLink de Matlab se visualiza de la siguiente manera.
-
-![image](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/1349a62b-0397-46d2-8588-1f9726b18450)
-
-No obstante, la posición de Home ahora tiene la siguiente configuración, ya que la pose Home se refiere a cuando el robot está completamente vertical.
-
-![image](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/f18165a0-0b9b-4327-a83f-e336a9b9a461)
-
-Considerando las diversas poses requeridas, según se detalla en la siguiente tabla.
-
-![image](https://github.com/Nguiom/Laboratorio_robotica/assets/72366982/dddb1708-a9eb-42a1-bd61-87e941f422f9)
+```
 
 ## Descripción del código de programación
 
