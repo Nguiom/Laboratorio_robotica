@@ -20,7 +20,8 @@ En el presente informe se detallan las actividades realizadas en el laboratorio,
 Se soluciono la cinematica inversa del robot para el que se reciban cordenas $x,y,z$ y la orientación del vector unitario de la conponente "O" del NOA estara en dirrección [0,0,1], la que corresponde a una linea con solo componentes en z. Estas son las ecuaciones utilizadas:
 
 ```math
-q1=\atan
+q1=\arctan(y/x)\\
+a=\sqrt()
 
 ```
 
