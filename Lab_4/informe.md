@@ -13,7 +13,7 @@
 
 ## Resumen
 
-En el presente informe se detallan las actividades realizadas en el laboratorio, que incluyeron el uso de Linux, ROS (Robotic Operating System), Python y MATLAB para llevar a cabo la simulación y control de una tortuga (turtle) en el simulador TurtleSim.
+En el presente informe se detallan las actividades realizadas en el laboratorio, que incluyeron el uso de Linux, ROS (Robotic Operating System), Python y MATLAB para llevar a cabo la simulación y control del phantom.
 
 ## Parámetros DH
 
