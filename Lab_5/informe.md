@@ -19,12 +19,26 @@ En el presente informe se detallan las actividades realizadas en el laboratorio,
 
 Se soluciono la cinematica inversa del robot para el que se reciban cordenas $x,y,z$ y la orientación del vector unitario de la conponente "O" del NOA estara en dirrección [0,0,1], la que corresponde a una linea con solo componentes en z. Estas son las ecuaciones utilizadas:
 
-```math
-q1=\arctan(y/x) \\
-a=\sqrt()
-
 ```
-
+		q1=np.arctan2(y,x)
+		a=np.sqrt(x**2+y**2)
+		alp=np.arctan2(z-136,a)
+		b=np.sqrt((z-136)**2+a**2)
+		q3s=np.sqrt(1-((b**2-2*(106**2))/(2*(106**2)))**2)
+		q3c=(b**2-2*(106**2))/(2*(106**2))
+		q3=np.arctan2(q3s,q3c)
+		bets=(106*np.sin(q3+np.pi))/b
+		betc=np.sqrt(1-((106*np.sin(q3+np.pi))/b)**2)
+		bet=np.arctan2(bets,betc)
+		q2=alp+bet-np.pi/2
+		rotc=((1.0*(-1.0*np.sin(q2 + 1.5707963267949))*np.sin(q3) + (1.0*np.cos(q2 + 1.5707963267949))*np.cos(q3)))/\
+		(1.0*(1.0*(-1.0*np.sin(q2 + 1.5707963267949))*np.cos(q3) - (1.0**np.cos(q2 + 1.5707963267949))*np.sin(q3)))
+		rots=1/(1.0*(-1.0*np.sin(q3)*np.sin(q2 + 1.5707963267949) + 1.0*np.cos(q3)*np.cos(q2 + 1.5707963267949))*rotc - \
+		(1.0*np.sin(q3)*np.cos(q2 + 1.5707963267949) + 1.0*np.sin(q2 + 1.5707963267949)*np.cos(q3)))
+		rotc=rotc*rots
+		q4=np.arctan2(rots,rotc)
+		return (q1,q2,q3,q4)
+```
 ## Descripción del código de programación
 
 En primer lugar, se ajusta la configuración de los motores mediante el archivo de configuración de Dynamixel, que se encuentra en la página del curso. Dentro de este archivo, se establecen los ajustes para los cinco motores que conforman el pincher. Una vez creado este archivo, se procede al código de Python, donde se importan las siguientes dependencias.
