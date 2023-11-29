@@ -1,8 +1,6 @@
 # Laboratorio_robotica
 
 **Por Nicolas Guio y Andrés Serna**
-
-El objetivo principal de esta práctica de laboratorio era aprender a programar un robot industrial ABB IRB140 utilizando RAPID y controlar sus acciones mediante señales digitales de entrada y salida. Además, debíamos desarrollar la habilidad de manejar bucles, condicionales y estructuras de control en RAPID, así como comprender cómo configurar y utilizar el módulo de entradas y salidas digitales en el controlador IRC5.
 ## Contenido
 - [Resumen](#1)
 - [Parámetros DH](#2)
